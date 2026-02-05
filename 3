@@ -1,0 +1,8 @@
+print('Программа для вычисления знакопеременной суммы')
+n = int(input('Введите натуральное число:'))
+sum = 0
+sign = 1
+for i in range(1, n + 1):
+    sum += sign * i
+    sign *= -1
+print(sum)

@@ -1,0 +1,17 @@
+print("Наибольшие числа")
+m = int(input("Введите общее количество значений: "))
+if m <= 2:
+    print("Требуется ввести более двух значений")
+else:
+    max1 = int(input("Введите значение x1: "))
+    max2 = int(input("Введите значение x2: "))
+    if max1 < max2:
+        max1, max2 = max2, max1
+    for j in range(3, m + 1):
+        value = int(input(f"Введите значение x{j}: "))
+        if value > max1:
+            max2, max1 = max1, value
+        elif value > max2:
+            max2 = value
+    print(f"Наибольшее значение: {max1}")
+    print(f"Второе наибольшее значение: {max2}")
